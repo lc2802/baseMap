@@ -1,5 +1,3 @@
-
-
 .header {
   background: linear-gradient(
     to right,
@@ -25,6 +23,9 @@
   color: #ffffff;
 }
 
+.navigation {
+  gap: 1rem;
+}
 .navigation button {
   font-size: 1rem;
   color: #333;
@@ -42,4 +43,3 @@
     rgba(245, 245, 220, 0.8)
   );
 }
-

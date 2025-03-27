@@ -1,0 +1,21 @@
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 80% !important; /* Hacer que el body ocupe toda la altura de la ventana */
+    overflow: hidden !important; /* Evitar que aparezca la barra de desplazamiento */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  #controls {
+    position: fixed;
+    top: 80%;
+    right: 1rem;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
