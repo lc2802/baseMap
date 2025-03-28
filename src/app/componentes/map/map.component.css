@@ -1,21 +1,35 @@
+/* Estilos para asegurar que el body ocupe el 100% de la altura */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Asegurar que el body ocupe toda la altura */
+  overflow: hidden;  /* Evitar barras de desplazamiento */
+  font-family: 'Poppins', sans-serif;
+}
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 80% !important; /* Hacer que el body ocupe toda la altura de la ventana */
-    overflow: hidden !important; /* Evitar que aparezca la barra de desplazamiento */
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  
-  #controls {
-    position: fixed;
-    top: 80%;
-    right: 1rem;
-    z-index: 20;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
+/* Estilo para el contenedor del mapa */
+#map {
+  width: 100%;
+  height: 100vh;  /* Asegura que el mapa ocupe toda la altura de la ventana */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Posicionamiento del componente app-layer-controller */
+app-layer-controller {
+  position: fixed;
+  top: 60%;  /* Ubicar en el 60% de la altura de la pantalla */
+  right: 20rem;  /* Ubicar 2rem del borde derecho */
+  z-index: 1000;  /* Asegura que esté por encima del mapa */
+  background-color: none;  /* Fondo blanco para el controlador */
+  padding: 1rem;
+  border-radius: 8px;  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+}
+
+/* Estilo para el contenedor de controles dentro de app-layer-controller */
+#controls {
+  max-height: 90vh; /* Limitar la altura máxima de los controles */
+  overflow-y: auto; /* Permitir desplazamiento si el contenido excede el tamaño */
+}

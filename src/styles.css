@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* En styles.css */
+body {
+  background: linear-gradient(to bottom, #b3d9ff, #d9f7be, #fff7e6);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: #2d3748;
+  transition: all 1s;
+}

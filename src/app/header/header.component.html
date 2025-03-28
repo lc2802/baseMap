@@ -1,10 +1,14 @@
-<header class="header d-flex align-items-center justify-content-between p-3">
-  <div class="logo-container d-flex align-items-center">
-    <img src="/assets/logo.png" alt="Logo" class="logo mr-3" />
-    <h1 class="header-title m-0">BaseMap</h1>
+<header class="sticky top-0 z-50 w-full bg-gradient-to-r from-[rgba(0,140,255,0.6)] to-[rgba(245,245,220,0.8)] text-white shadow-md flex items-center justify-between p-4">
+  <div class="flex items-center">
+    <img src="/assets/logo.png" alt="Logo" class="w-12 h-auto mr-3" />
+    <h1 class="text-xl font-bold text-white">BaseMap</h1>
   </div>
-  <nav class="navigation d-flex">
-    <button (click)="redirectToMap()">Mapas</button>
-    <button (click)="redirectToHome()">Inicio</button>
+  <nav class="flex gap-4">
+    <button (click)="redirectToMap()" class="text-gray-800 bg-white/90 px-4 py-2 rounded-md transition duration-300 hover:bg-gradient-to-r hover:from-[rgba(0,140,255,0.6)] hover:to-[rgba(245,245,220,0.8)]">
+      Mapas
+    </button>
+    <button (click)="redirectToHome()" class="text-gray-800 bg-white/90 px-4 py-2 rounded-md transition duration-300 hover:bg-gradient-to-r hover:from-[rgba(0,140,255,0.6)] hover:to-[rgba(245,245,220,0.8)]">
+      Inicio
+    </button>
   </nav>
 </header>

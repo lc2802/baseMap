@@ -12,7 +12,6 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   redirectToMap() {
-    console.log('Redirigiendo a /map');
 
     this.router.navigate(['/map']);
   }
