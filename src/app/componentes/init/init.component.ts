@@ -1,33 +1,31 @@
-import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+declare var bootstrap: any;  // Para poder usar el carrusel de Bootstrap
 
 @Component({
   selector: 'app-init',
   standalone: true,
-  imports: [NgClass],
   templateUrl: './init.component.html',
-  styleUrl: './init.component.css',
+  styleUrls: ['./init.component.css'],
 })
-export class InitComponent {
+export class InitComponent implements AfterViewInit {
   constructor(private router: Router) {}
-  currentIndex: number = 0; // Índice actual de la imagen visible
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      const carouselElement = document.querySelector('#carouselExampleIndicators');
+      if (carouselElement) {
+        new bootstrap.Carousel(carouselElement, {
+          interval: 3000, 
+          pause: 'hover', 
+          wrap: true,     
+        });
+      }
+    }, 0); 
+  }
 
   redirectToMap() {
     this.router.navigate(['/map']);
-  }
-
-  // Método para cambiar la imagen mostrada
-  setSlide(index: number): void {
-    this.currentIndex = index;
-  }
-
-  // Método para avanzar a la siguiente imagen
-  nextSlide(): void {
-    this.currentIndex = (this.currentIndex + 1) % 3; 
-  }
-
-  prevSlide(): void {
-    this.currentIndex = (this.currentIndex - 1 + 3) % 3; 
   }
 }

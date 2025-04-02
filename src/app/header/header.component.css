@@ -1,4 +1,4 @@
-/* .header {
+.header {
   background: linear-gradient(
     to right,
     rgba(0, 140, 255, 0.6),
@@ -42,4 +42,4 @@
     rgba(0, 140, 255, 0.6),
     rgba(245, 245, 220, 0.8)
   );
-} */
+}
