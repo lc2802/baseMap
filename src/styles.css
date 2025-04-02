@@ -1,8 +1,30 @@
-/* En styles.css */
+/* Minimalist Gradient Style */
 body {
-  background: linear-gradient(to bottom, #b3d9ff, #d9f7be, #fff7e6);
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  color: #2d3748;
-  transition: all 1s;
+  background: linear-gradient(to bottom, 
+              rgb(45, 49, 54), 
+              rgb(73, 192, 181), 
+              rgb(243, 242, 243));
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: rgb(243, 242, 243);
+  line-height: 1.6;
+  transition: background 0.5s ease;
+}
+
+/* Optional minimalist elements */
+a {
+  color: rgb(73, 192, 181);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(243, 242, 243);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
